@@ -1,0 +1,46 @@
+# Python specific
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+venv/
+env/
+ENV/
+env.bak/
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# SQLAlchemy specific
+instance/
+*.db
+*.sqlite3
+
+# Nextcord specific
+# No specific ignore rules for Nextcord, but environment variables for tokens should be managed carefully
+
+# Environment variables
+.env
+*.env
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+# Test artifacts
+.coverage
+htmlcov/
+.tox/
+.nox/
+.cache
+
+# IDE-specific files
+.vscode/
+.idea/
+*.swp
+.DS_Store
