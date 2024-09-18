@@ -2,11 +2,11 @@ from sqlalchemy.orm import Session
 from db.models import Candidate
 
 
-def create_candidate(db: Session, user_id: int):
+def create_candidate(db: Session, user_id: int, username: str, avatar_url: str):
   if get_candidate_by_id(db=db, user_id=user_id):
     raise ValueError(f'Candidate with user_id {user_id} already exists.')
   
-  candidate = Candidate(user_id=user_id)
+  candidate = Candidate(user_id=user_id, username=username, avatar_url=avatar_url)
   db.add(candidate)
   db.commit()
   db.refresh(candidate)
