@@ -9,3 +9,6 @@ load_dotenv(dotenv_path=BASE_DIR / '.env.example')
 
 BOT_TOKEN = getenv('BOT_TOKEN')
 BOT_PREFIX = '>'
+
+GUILD_ID = 1217879394941534330
+ELECTIONS_CHANNEL = 1286044634853675059

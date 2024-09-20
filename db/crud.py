@@ -49,3 +49,12 @@ def get_candidate_by_id(db: Session, user_id: int):
 
 def get_all_candidates(db: Session):
   return db.query(Candidate).all()
+
+def get_candidate_count(db: Session):
+  return db.query(Candidate).count()
+
+def get_top_candidate(db: Session):
+  return db.query(Candidate).order_by(Candidate.votes.desc()).first()
+
+def get_top_candidates(db: Session):
+  return db.query(Candidate).order_by(Candidate.votes.desc()).limit(5).all()
